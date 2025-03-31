@@ -18,8 +18,8 @@ hours = st.number_input("Hours studied:", min_value=0.0, step=1.0)
 if st.button("Predict"):
     try:
         data = [[hours]]
-        scaled_data = scaler.transform(data)
-        prediction = model.predict(scaled_data)
+        scaled_data = loaded_scaler.transform(data)
+        prediction = loaded_model.predict(scaled_data)
         st.write(f"Predicted Test Score: {prediction[0]:.2f}")
     except Exception as e:
         st.error(f"Error: {e}")
