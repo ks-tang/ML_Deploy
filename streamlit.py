@@ -1,5 +1,5 @@
-# import streamlit as st
-# import joblib
+import streamlit as st
+import joblib
 
 # Load du model
 loaded_model = joblib.load('linear_regression_model.pkl')
